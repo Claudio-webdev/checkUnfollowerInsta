@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.form{
+  display: block;
+}
+
+.tutorialImagesDesktop{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+}
+.tutorialImagesDesktop img{
+  width: 640px;
+  height: 360px;
+
+}
+.areatoPaste{
+  background-color: lightgray;
+  color: black;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 7px 7px lightblue  ;
+  width: 500px;
+}
+.areatoPaste textarea{
+  width: 300px;
+  height: 100px;
+  text-align: center;
+
+}
+.succesCopy{
+  color: lightgreen;
+  background-color: #282c34;
+}
+h2{
+  color: red;
+}
+.formtoSub{
+  border-right: 3px solid black;
+}
+
+.stepsApp{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 100px;
+}
+.gridAccountToDelete{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  background-color: rgb(155, 43, 43);
+  color: #282c34;
+}
+
+
+
