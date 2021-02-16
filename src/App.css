@@ -64,6 +64,81 @@ h2{
   background-color: rgb(155, 43, 43);
   color: #282c34;
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  /* For desktop: */
+  .App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .form{
+    display: block;
+  }
+  
+  .tutorialImagesDesktop{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .tutorialImagesDesktop img{
+    width: 320px;
+    height: 180px;
+    justify-self: center;
+  }
+  .areatoPaste{
+    background-color: lightgray;
+    color: black;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 7px 7px lightblue  ;
+    position: relative;
+    width: 100%;
+  }
+  .areatoPaste textarea{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  
+  }
+  .succesCopy{
+    color: lightgreen;
+    background-color: #282c34;
+  }
+  h2{
+    color: red;
+  }
+  .formtoSub{
+    border-right: 3px solid black;
+  }
+  
+  .stepsApp{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 10px;
+    margin: 10px;
+  }
+  .gridAccountToDelete{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: rgb(155, 43, 43);
+    color: #282c34;
+  }
+  h1{
+    font-size: 25px;
+  }
+}
 
 
 
