@@ -111,10 +111,19 @@ h2{
     grid-template-columns: 1fr;
     grid-gap: 10px;
   }
+  .tutorialImagesMobile{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
   .tutorialImagesDesktop img{
     width: 320px;
     height: 180px;
     justify-self: center;
+  }
+  .tutorialImagesMobile img{
+    width: 160px;
+    height: 406px;
   }
   .areatoPaste{
     background-color: lightgray;
