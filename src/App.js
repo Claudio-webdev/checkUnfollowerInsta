@@ -53,32 +53,32 @@ const reducer = (state, action) => {
         ...state,
         language: action.payload
       }
-    case 'GET_ITALIAN_LIST':
-      let vecchiFollowersLista = action.oldfollowers.split(/(?<=\b\sdi\s)(\S+)/)
-      let nuoviFollowersLista = action.newfollower.split(/(?<=\b\sdi\s)(\S+)/)
-      let seguaciPrima = [];
-      let seguagiDopo = [];
-      vecchiFollowersLista.forEach((el, i) => {
-        if (i%2 === 0 ){
-          return null
-        }else {
-          let vecchiFollowers = el.substring(0, el.length-1)
-          seguaciPrima.push(vecchiFollowers)
-        }
-      })
-      nuoviFollowersLista.forEach((el, i) => {
-        if (i%2 === 0 ){
-          return null
-        }else {
-          let nuoviFollowers = el.substring(0, el.length-1)
-          seguagiDopo.push(nuoviFollowers)
-        }
-      })
-      return {
-        ...state,
-        olderfollowersList: seguaciPrima,
-        newerfollowersList: seguagiDopo,
-      }
+    // case 'GET_ITALIAN_LIST':
+    //   let vecchiFollowersLista = action.oldfollowers.split(/(?<=\b\sdi\s)(\S+)/)
+    //   let nuoviFollowersLista = action.newfollower.split(/(?<=\b\sdi\s)(\S+)/)
+    //   let seguaciPrima = [];
+    //   let seguagiDopo = [];
+    //   vecchiFollowersLista.forEach((el, i) => {
+    //     if (i%2 === 0 ){
+    //       return null
+    //     }else {
+    //       let vecchiFollowers = el.substring(0, el.length-1)
+    //       seguaciPrima.push(vecchiFollowers)
+    //     }
+    //   })
+    //   nuoviFollowersLista.forEach((el, i) => {
+    //     if (i%2 === 0 ){
+    //       return null
+    //     }else {
+    //       let nuoviFollowers = el.substring(0, el.length-1)
+    //       seguagiDopo.push(nuoviFollowers)
+    //     }
+    //   })
+    //   return {
+    //     ...state,
+    //     olderfollowersList: seguaciPrima,
+    //     newerfollowersList: seguagiDopo,
+    //   }
 
     default:
       return {
@@ -96,7 +96,8 @@ function App() {
     if (state.language === 'English') {
       dispatch({ type: 'GET_INGLISH_LISTS', oldfollowers:e.target.olderfollowersList.value , newfollower:e.target.newerfollowersList.value})
     }else {
-      dispatch({ type: 'GET_ITALIAN_LIST', oldfollowers:e.target.olderfollowersList.value , newfollower:e.target.newerfollowersList.value})
+      alert('Italian version non disponibile')
+      // dispatch({ type: 'GET_ITALIAN_LIST', oldfollowers:e.target.olderfollowersList.value , newfollower:e.target.newerfollowersList.value})
     }
     
     e.target.olderfollowersList.value = null
