@@ -147,14 +147,13 @@ h2{
     color: red;
   }
   .formtoSub{
-    border-right: 3px solid black;
+    border-right:none;
   }
   
   .stepsApp{
-    display: grid;
-    grid-template-columns:1fr;
-    grid-gap: 10px;
-    margin: 10px;
+    display: block;
+    margin: 50px;
+
   }
   .gridAccountToDelete{
     display: grid;
