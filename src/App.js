@@ -140,8 +140,8 @@ function App() {
       <h1>UNFOLLOWER CHECKER </h1>
       <p>INSTAGRAM VERSION</p>
       {languages.map((el, i ) => (
-          i === 0 ? <button className="languageBtn active" type="button" onClick={(e) => handleChangeLanguage(e, el)}>{el}</button> :
-        <button className="languageBtn" type="button" onClick={(e) => handleChangeLanguage(e, el)}>{el}</button>
+          i === 0 ? <button key={el} className="languageBtn active" type="button" onClick={(e) => handleChangeLanguage(e, el)}>{el}</button> :
+        <button key={el} className="languageBtn" type="button" onClick={(e) => handleChangeLanguage(e, el)}>{el}</button>
       ))}
 
       <div className="stepsApp">
@@ -172,11 +172,11 @@ function App() {
           <button type="button" onClick={handleCheck}>check</button>
         </div>
       </div>
-      <p class>Unfollowers account</p>
+      <p>Unfollowers account</p>
       <div className="gridAccountToDelete">
         {
           state.accountToDelete.map((account) => (
-                <a href={`https://www.instagram.com/${account}`} target="_blank" rel="noreferrer">{account}</a>
+                <a key={account} href={`https://www.instagram.com/${account}`} target="_blank" rel="noreferrer">{account}</a>
           ))
         }
       </div>
