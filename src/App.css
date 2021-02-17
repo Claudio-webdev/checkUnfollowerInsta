@@ -124,6 +124,7 @@ h2{
   .tutorialImagesMobile img{
     width: 160px;
     height: 406px;
+    justify-self: center;
   }
   .areatoPaste{
     background-color: lightgray;
