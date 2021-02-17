@@ -1,6 +1,17 @@
 .App {
   text-align: center;
 }
+ul{
+  text-align: start;
+  margin: 30px;
+}
+li{
+  list-style: decimal;
+  padding-bottom: 10px;
+}
+.active{
+  background-color: greenyellow;
+}
 
 .App-header {
   background-color: #282c34;
@@ -22,10 +33,18 @@
   grid-gap: 10px;
 
 }
+.tutorialImagesMobile{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
 .tutorialImagesDesktop img{
   width: 640px;
   height: 360px;
-
+}
+.tutorialImagesMobile img{
+  width: 375px;
+  height: 812px;
 }
 .areatoPaste{
   background-color: lightgray;
@@ -139,6 +158,16 @@ h2{
     font-size: 25px;
   }
 }
-
-
+b{
+  color: greenyellow;
+}
+i{
+  color:red
+}
+q{
+  color: yellow;
+}
+strong{
+  text-decoration: underline;
+}
 
