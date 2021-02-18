@@ -58,14 +58,13 @@ const reducer = (state, action) => {
       // let nuoviFollowersLista = action.newfollower.split(/(?<=\b\sdi\s)(\S+)/)
       let vecchiFollowersLista = action.oldfollowers.split(/(di\s\S+)/)
       let nuoviFollowersLista = action.newfollower.split(/(di\s\S+)/)
-      console.log(vecchiFollowersLista)
       let seguaciPrima = [];
       let seguaciDopo = [];
       vecchiFollowersLista.forEach((el, i) => {
         if (i%2 === 0 ){
           return null
         }else {
-          let vecchiFollowers = el.substring(0, el.length-1)
+          let vecchiFollowers = el.substring(0, el.length)
           seguaciPrima.push(vecchiFollowers)
         }
       })
@@ -73,11 +72,10 @@ const reducer = (state, action) => {
         if (i%2 === 0 ){
           return null
         }else {
-          let nuoviFollowers = el.substring(0, el.length-1)
+          let nuoviFollowers = el.substring(0, el.length)
           seguaciDopo.push(nuoviFollowers)
         }
       })
-      console.log(seguaciPrima)
       let a = []
       let b = []
       seguaciPrima.forEach((el) => {
@@ -88,7 +86,10 @@ const reducer = (state, action) => {
         let x = el.slice(3);
         b.push(x)
       })
-
+      console.log(a.length)
+      console.log(a)
+      console.log(b.length)
+      console.log(b)
       return {
         ...state,
         olderfollowersList: a,
