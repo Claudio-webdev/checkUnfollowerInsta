@@ -149,9 +149,14 @@ function App() {
     })
     e.target.classList.add('active')
   }
+  function myFunction(event) {
+    var x = event.touches[0].clientX;
+    var y = event.touches[0].clientY;
+    document.getElementById("demo").innerHTML = x + ", " + y;
+  }
 
   return (
-    <div className="App">
+    <div className="App" onTouchMove= {myFunction}>
       <header className="App-header">
       <h1>UNFOLLOWER CHECKER </h1>
       <p>INSTAGRAM VERSION</p>
@@ -159,7 +164,7 @@ function App() {
           i === 0 ? <button key={el} className="languageBtn active" type="button" onClick={(e) => handleChangeLanguage(e, el)}>{el}</button> :
         <button key={el} className="languageBtn" type="button" onClick={(e) => handleChangeLanguage(e, el)}>{el}</button>
       ))}
-
+      <p id="demo"></p>
       <div className="stepsApp">
         <div className="areatoPaste">
           <h2>STEP 1</h2>
